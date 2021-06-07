@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bootcamp.instagram.R
-import com.example.bootcamp.instagram.di.component.FragmentComponent
-import com.example.bootcamp.instagram.ui.base.BaseFragment
+import com.example.instagram.R
+import com.example.instagram.di.component.FragmentComponent
+import com.example.instagram.ui.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_dummies.*
 import javax.inject.Inject
 

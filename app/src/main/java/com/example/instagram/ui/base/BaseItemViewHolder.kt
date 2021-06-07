@@ -10,11 +10,11 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bootcamp.instagram.InstagramApplication
-import com.example.bootcamp.instagram.di.component.DaggerViewHolderComponent
-import com.example.bootcamp.instagram.di.component.ViewHolderComponent
-import com.example.bootcamp.instagram.di.module.ViewHolderModule
-import com.example.bootcamp.instagram.utils.display.Toaster
+import com.example.instagram.InstagramApplication
+import com.example.instagram.di.component.DaggerViewHolderComponent
+import com.example.instagram.di.component.ViewHolderComponent
+import com.example.instagram.di.module.ViewHolderModule
+import com.example.instagram.utils.display.Toaster
 import javax.inject.Inject
 
 abstract class BaseItemViewHolder<T : Any, VM : BaseItemViewModel<T>>(

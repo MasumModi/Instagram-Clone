@@ -3,11 +3,12 @@ package com.example.instagram.ui.splash
 import android.content.Intent
 import android.os.Bundle
 import androidx.lifecycle.Observer
-import com.example.bootcamp.instagram.R
-import com.example.bootcamp.instagram.di.component.ActivityComponent
-import com.example.bootcamp.instagram.ui.base.BaseActivity
-import com.example.bootcamp.instagram.ui.dummy.DummyActivity
-import com.example.bootcamp.instagram.utils.common.Event
+import com.example.instagram.R
+import com.example.instagram.di.component.ActivityComponent
+import com.example.instagram.ui.base.BaseActivity
+import com.example.instagram.ui.dummy.DummyActivity
+import com.example.instagram.ui.login.LoginActivity
+import com.example.instagram.utils.common.Event
 
 class SplashActivity : BaseActivity<SplashViewModel>() {
 
@@ -22,6 +23,7 @@ class SplashActivity : BaseActivity<SplashViewModel>() {
     }
 
     override fun setupView(savedInstanceState: Bundle?) {
+
     }
 
     override fun setupObservers() {
@@ -30,6 +32,12 @@ class SplashActivity : BaseActivity<SplashViewModel>() {
         viewModel.launchDummy.observe(this, Observer<Event<Map<String, String>>> {
             it.getIfNotHandled()?.run {
                 startActivity(Intent(applicationContext, DummyActivity::class.java))
+            }
+        })
+
+        viewModel.launchLogin.observe(this, Observer<Event<Map<String, String>>> {
+            it.getIfNotHandled()?.run {
+                startActivity(Intent(applicationContext, LoginActivity::class.java))
             }
         })
     }

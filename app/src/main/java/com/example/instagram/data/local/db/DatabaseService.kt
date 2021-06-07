@@ -2,8 +2,8 @@ package com.example.instagram.data.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.bootcamp.instagram.data.local.db.dao.DummyDao
-import com.example.bootcamp.instagram.data.local.db.entity.DummyEntity
+import com.example.instagram.data.local.db.dao.DummyDao
+import com.example.instagram.data.local.db.entity.DummyEntity
 import javax.inject.Singleton
 
 @Singleton

@@ -2,13 +2,13 @@ package com.example.instagram.di.module
 
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bootcamp.instagram.data.repository.DummyRepository
-import com.example.bootcamp.instagram.ui.base.BaseFragment
-import com.example.bootcamp.instagram.ui.dummies.DummiesAdapter
-import com.example.bootcamp.instagram.ui.dummies.DummiesViewModel
-import com.example.bootcamp.instagram.utils.ViewModelProviderFactory
-import com.example.bootcamp.instagram.utils.network.NetworkHelper
-import com.example.bootcamp.instagram.utils.rx.SchedulerProvider
+import com.example.instagram.data.repository.DummyRepository
+import com.example.instagram.ui.base.BaseFragment
+import com.example.instagram.ui.dummies.DummiesAdapter
+import com.example.instagram.ui.dummies.DummiesViewModel
+import com.example.instagram.utils.ViewModelProviderFactory
+import com.example.instagram.utils.network.NetworkHelper
+import com.example.instagram.utils.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable

@@ -1,9 +1,9 @@
 package com.example.instagram.ui.dummy
 
-import com.example.bootcamp.instagram.data.repository.DummyRepository
-import com.example.bootcamp.instagram.ui.base.BaseViewModel
-import com.example.bootcamp.instagram.utils.network.NetworkHelper
-import com.example.bootcamp.instagram.utils.rx.SchedulerProvider
+import com.example.instagram.data.repository.DummyRepository
+import com.example.instagram.ui.base.BaseViewModel
+import com.example.instagram.utils.network.NetworkHelper
+import com.example.instagram.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 
 

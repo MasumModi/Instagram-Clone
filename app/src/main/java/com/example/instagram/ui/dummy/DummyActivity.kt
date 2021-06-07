@@ -1,10 +1,10 @@
 package com.example.instagram.ui.dummy
 
 import android.os.Bundle
-import com.example.bootcamp.instagram.R
-import com.example.bootcamp.instagram.di.component.ActivityComponent
-import com.example.bootcamp.instagram.ui.base.BaseActivity
-import com.example.bootcamp.instagram.ui.dummies.DummiesFragment
+import com.example.instagram.R
+import com.example.instagram.di.component.ActivityComponent
+import com.example.instagram.ui.base.BaseActivity
+import com.example.instagram.ui.dummies.DummiesFragment
 
 class DummyActivity : BaseActivity<DummyViewModel>() {
 

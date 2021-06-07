@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.PorterDuff
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.example.bootcamp.instagram.R
+import com.example.instagram.R
 
 object Toaster {
     fun show(context: Context, text: CharSequence) {

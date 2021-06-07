@@ -2,7 +2,7 @@ package com.example.instagram.data.remote.response
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import com.example.bootcamp.instagram.data.model.Dummy
+import com.example.instagram.data.model.Dummy
 
 data class DummyResponse(
     @Expose

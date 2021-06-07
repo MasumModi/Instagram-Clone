@@ -1,9 +1,9 @@
 package com.example.instagram
 
 import android.app.Application
-import com.example.bootcamp.instagram.di.component.ApplicationComponent
-import com.example.bootcamp.instagram.di.component.DaggerApplicationComponent
-import com.example.bootcamp.instagram.di.module.ApplicationModule
+import com.example.instagram.di.component.ApplicationComponent
+import com.example.instagram.di.component.DaggerApplicationComponent
+import com.example.instagram.di.module.ApplicationModule
 
 class InstagramApplication : Application() {
 

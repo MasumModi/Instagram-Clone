@@ -5,11 +5,11 @@ import androidx.annotation.LayoutRes
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.example.bootcamp.instagram.InstagramApplication
-import com.example.bootcamp.instagram.di.component.ActivityComponent
-import com.example.bootcamp.instagram.di.component.DaggerActivityComponent
-import com.example.bootcamp.instagram.di.module.ActivityModule
-import com.example.bootcamp.instagram.utils.display.Toaster
+import com.example.instagram.InstagramApplication
+import com.example.instagram.di.component.ActivityComponent
+import com.example.instagram.di.component.DaggerActivityComponent
+import com.example.instagram.di.module.ActivityModule
+import com.example.instagram.utils.display.Toaster
 import javax.inject.Inject
 
 /**

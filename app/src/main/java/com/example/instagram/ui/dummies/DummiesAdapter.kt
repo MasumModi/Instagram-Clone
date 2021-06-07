@@ -2,8 +2,8 @@ package com.example.instagram.ui.dummies
 
 import android.view.ViewGroup
 import androidx.lifecycle.Lifecycle
-import com.example.bootcamp.instagram.data.model.Dummy
-import com.example.bootcamp.instagram.ui.base.BaseAdapter
+import com.example.instagram.data.model.Dummy
+import com.example.instagram.ui.base.BaseAdapter
 
 class DummiesAdapter(
     parentLifecycle: Lifecycle,

@@ -2,14 +2,15 @@ package com.example.instagram.di.module
 
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bootcamp.instagram.data.repository.DummyRepository
-import com.example.bootcamp.instagram.data.repository.UserRepository
-import com.example.bootcamp.instagram.ui.base.BaseActivity
-import com.example.bootcamp.instagram.ui.dummy.DummyViewModel
-import com.example.bootcamp.instagram.ui.splash.SplashViewModel
-import com.example.bootcamp.instagram.utils.ViewModelProviderFactory
-import com.example.bootcamp.instagram.utils.network.NetworkHelper
-import com.example.bootcamp.instagram.utils.rx.SchedulerProvider
+import com.example.instagram.data.repository.DummyRepository
+import com.example.instagram.data.repository.UserRepository
+import com.example.instagram.ui.base.BaseActivity
+import com.example.instagram.ui.dummy.DummyViewModel
+import com.example.instagram.ui.login.LoginViewModel
+import com.example.instagram.ui.splash.SplashViewModel
+import com.example.instagram.utils.ViewModelProviderFactory
+import com.example.instagram.utils.network.NetworkHelper
+import com.example.instagram.utils.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
@@ -47,4 +48,15 @@ class ActivityModule(private val activity: BaseActivity<*>) {
         activity, ViewModelProviderFactory(DummyViewModel::class) {
             DummyViewModel(schedulerProvider, compositeDisposable, networkHelper, dummyRepository)
         }).get(DummyViewModel::class.java)
+
+    @Provides
+    fun provideLoginViewModel(
+        schedulerProvider: SchedulerProvider,
+        compositeDisposable: CompositeDisposable,
+        networkHelper: NetworkHelper,
+        userRepository: UserRepository
+    ): LoginViewModel = ViewModelProviders.of(
+        activity, ViewModelProviderFactory(LoginViewModel::class) {
+            LoginViewModel(schedulerProvider, compositeDisposable, networkHelper, userRepository)
+        }).get(LoginViewModel::class.java)
 }

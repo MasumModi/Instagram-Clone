@@ -2,10 +2,10 @@ package com.example.instagram.ui.base
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.bootcamp.instagram.R
-import com.example.bootcamp.instagram.utils.common.Resource
-import com.example.bootcamp.instagram.utils.network.NetworkHelper
-import com.example.bootcamp.instagram.utils.rx.SchedulerProvider
+import com.example.instagram.R
+import com.example.instagram.utils.common.Resource
+import com.example.instagram.utils.network.NetworkHelper
+import com.example.instagram.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 import javax.net.ssl.HttpsURLConnection
 

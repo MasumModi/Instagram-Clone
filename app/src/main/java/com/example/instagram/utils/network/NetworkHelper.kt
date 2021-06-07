@@ -5,7 +5,7 @@ import android.net.ConnectivityManager
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonSyntaxException
 import com.jakewharton.retrofit2.adapter.rxjava2.HttpException
-import com.example.bootcamp.instagram.utils.log.Logger
+import com.example.instagram.utils.log.Logger
 import java.io.IOException
 import java.net.ConnectException
 import javax.inject.Singleton

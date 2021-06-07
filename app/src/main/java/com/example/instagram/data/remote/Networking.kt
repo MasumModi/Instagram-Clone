@@ -1,7 +1,7 @@
 package com.example.instagram.data.remote
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import com.example.bootcamp.instagram.BuildConfig
+import com.example.instagram.BuildConfig
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

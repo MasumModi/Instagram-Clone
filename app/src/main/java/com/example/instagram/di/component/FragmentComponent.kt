@@ -1,8 +1,8 @@
 package com.example.instagram.di.component
 
-import com.example.bootcamp.instagram.di.FragmentScope
-import com.example.bootcamp.instagram.di.module.FragmentModule
-import com.example.bootcamp.instagram.ui.dummies.DummiesFragment
+import com.example.instagram.di.FragmentScope
+import com.example.instagram.di.module.FragmentModule
+import com.example.instagram.ui.dummies.DummiesFragment
 import dagger.Component
 
 @FragmentScope

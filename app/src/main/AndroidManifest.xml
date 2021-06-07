@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.bootcamp.instagram">
+          package="com.example.instagram">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-            android:name="com.example.bootcamp.instagram.InstagramApplication"
+            android:name="com.example.instagram.InstagramApplication"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <activity android:name="com.example.bootcamp.instagram.ui.splash.SplashActivity"
+        <activity android:name="com.example.instagram.ui.splash.SplashActivity"
                   android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,7 +21,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.bootcamp.instagram.ui.dummy.DummyActivity"/>
+        <activity android:name="com.example.instagram.ui.login.LoginActivity"/>
+
+        <activity android:name="com.example.instagram.ui.dummy.DummyActivity"/>
+
     </application>
 
 </manifest>

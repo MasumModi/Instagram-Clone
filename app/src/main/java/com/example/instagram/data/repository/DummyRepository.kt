@@ -1,9 +1,9 @@
 package com.example.instagram.data.repository
 
-import com.example.bootcamp.instagram.data.local.db.DatabaseService
-import com.example.bootcamp.instagram.data.model.Dummy
-import com.example.bootcamp.instagram.data.remote.NetworkService
-import com.example.bootcamp.instagram.data.remote.request.DummyRequest
+import com.example.instagram.data.local.db.DatabaseService
+import com.example.instagram.data.model.Dummy
+import com.example.instagram.data.remote.NetworkService
+import com.example.instagram.data.remote.request.DummyRequest
 import io.reactivex.Single
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
 package com.example.instagram.utils.log
 
-import com.example.bootcamp.instagram.BuildConfig
+import com.example.instagram.BuildConfig
 import timber.log.Timber
 
 object Logger {

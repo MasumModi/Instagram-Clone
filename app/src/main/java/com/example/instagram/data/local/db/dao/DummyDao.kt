@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import com.example.bootcamp.instagram.data.local.db.entity.DummyEntity
+import com.example.instagram.data.local.db.entity.DummyEntity
 
 
 @Dao
