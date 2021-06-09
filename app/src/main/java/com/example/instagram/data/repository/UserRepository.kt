@@ -5,6 +5,7 @@ import com.example.instagram.data.local.prefs.UserPreferences
 import com.example.instagram.data.model.User
 import com.example.instagram.data.remote.NetworkService
 import com.example.instagram.data.remote.request.LoginRequest
+import com.example.instagram.data.remote.request.SignupRequest
 import io.reactivex.Single
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -45,6 +46,18 @@ class UserRepository @Inject constructor(
 
     fun doUserLogin(email: String, password: String): Single<User> =
             networkService.doLoginCall(LoginRequest(email, password))
+                    .map {
+                        User(
+                                it.userId,
+                                it.userName,
+                                it.userEmail,
+                                it.accessToken,
+                                it.profilePicUrl
+                        )
+                    }
+
+    fun doUserSignup(fullName: String, email: String, password: String): Single<User> =
+            networkService.doSignupCall(SignupRequest(fullName, email, password))
                     .map {
                         User(
                                 it.userId,

@@ -7,10 +7,11 @@
         android:padding="32dp">
 
     <ImageView
+        android:layout_marginBottom="42dp"
         app:layout_constraintBottom_toTopOf="@+id/layout_email"
         android:src="@drawable/instagram_logo"
         android:layout_width="match_parent"
-        android:layout_height="150dp"/>
+        android:layout_height="58dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layout_email"
@@ -70,7 +71,6 @@
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-
             app:layout_constraintTop_toBottomOf="@+id/layout_password"/>
 
     <ProgressBar
@@ -82,5 +82,50 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/lin_separator"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:padding="10dp"
+            style="@style/AppTheme.Caption"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="@string/or"
+            app:layout_constraintTop_toBottomOf="@+id/lin_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@android:color/darker_gray"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:padding="20dp"
+        android:gravity="center"
+        style="@style/AppTheme.Headline5"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:text="@string/sign_up_with_email"
+        app:layout_constraintTop_toBottomOf="@+id/lin_separator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

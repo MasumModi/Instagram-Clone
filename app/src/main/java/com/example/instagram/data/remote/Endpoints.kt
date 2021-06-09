@@ -6,5 +6,6 @@ object Endpoints {
 
     const val LOGIN = "login/mindorks"
 
+    const val SIGNUP = "signup/mindorks"
 
 }

@@ -10,6 +10,7 @@ import com.example.instagram.R
 import com.example.instagram.di.component.ActivityComponent
 import com.example.instagram.ui.base.BaseActivity
 import com.example.instagram.ui.dummy.DummyActivity
+import com.example.instagram.ui.signup.SignupActivity
 import com.example.instagram.utils.common.Event
 import com.example.instagram.utils.common.Status
 import kotlinx.android.synthetic.main.activity_login.*
@@ -19,7 +20,7 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
     override fun provideLayoutId(): Int = R.layout.activity_login
 
     override fun injectDependencies(activityComponent: ActivityComponent) =
-            activityComponent.inject(this)
+        activityComponent.inject(this)
 
     override fun setupView(savedInstanceState: Bundle?) {
 
@@ -27,6 +28,7 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 viewModel.onEmailChange(s.toString())
             }
+
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         })
@@ -35,11 +37,17 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 viewModel.onPasswordChange(s.toString())
             }
+
             override fun afterTextChanged(s: Editable?) {}
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
         })
 
         bt_login.setOnClickListener { viewModel.onLogin() }
+
+        tv_signup.setOnClickListener {
+            startActivity(Intent(applicationContext, SignupActivity::class.java))
+            finish()
+        }
 
     }
 
@@ -79,11 +87,6 @@ class LoginActivity : BaseActivity<LoginViewModel>() {
         viewModel.loggingIn.observe(this, Observer {
             pb_loading.visibility = if (it) View.VISIBLE else View.GONE
         })
-    }
-
-
-    companion object {
-        private const val TAG = "LoginActivity"
     }
 
 }

@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.mindorks.bootcamp.instagram", appContext.packageName)
+        assertEquals("com.example.instagram", appContext.packageName)
     }
 }

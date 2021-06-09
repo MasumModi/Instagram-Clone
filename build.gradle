@@ -63,7 +63,7 @@ ext {
     okhttp_version = '3.11.0'
 
     // Dagger
-    dagger_version = '2.21'
+    dagger_version = '2.36'
 
     // Tests
     junit_version = '4.12'
