@@ -9,7 +9,7 @@
     <string name="server_connection_error">Not able to connect, please retry again</string>
     <string name="network_login_again">Please log in again</string>
 
-    <!--login-->
+    <!--login and signup-->
     <string name="full_name_field_hint">Enter your full name</string>
     <string name="email_field_hint">Enter your email</string>
     <string name="password_field_hint">Enter your password</string>
@@ -24,4 +24,10 @@
     <string name="sign_up_with_email">Sign Up with Email</string>
     <string name="or">OR</string>
     <string name="login_with_email">Login with Email</string>
+
+
+    <!--menu-->
+    <string name="menu_home">Home</string>
+    <string name="menu_add_photos">Add Photos</string>
+    <string name="menu_profile">Profile</string>
 </resources>

@@ -11,6 +11,7 @@ import com.example.instagram.di.component.ActivityComponent
 import com.example.instagram.ui.base.BaseActivity
 import com.example.instagram.ui.dummy.DummyActivity
 import com.example.instagram.ui.login.LoginActivity
+import com.example.instagram.ui.main.MainActivity
 import com.example.instagram.utils.common.Event
 import com.example.instagram.utils.common.Status
 import kotlinx.android.synthetic.main.activity_signup.*
@@ -63,9 +64,9 @@ class SignupActivity : BaseActivity<SignupViewModel>() {
         super.setupObservers()
         // Event is used by the view model to tell the activity to launch another activity
         // view model also provided the Bundle in the event that is needed for the Activity
-        viewModel.launchDummy.observe(this, Observer<Event<Map<String, String>>> {
+        viewModel.launchMain.observe(this, Observer<Event<Map<String, String>>> {
             it.getIfNotHandled()?.run {
-                startActivity(Intent(applicationContext, DummyActivity::class.java))
+                startActivity(Intent(applicationContext, MainActivity::class.java))
                 finish()
             }
         })

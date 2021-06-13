@@ -18,7 +18,7 @@ class SignupViewModel(
 ) : BaseViewModel(schedulerProvider, compositeDisposable, networkHelper) {
 
     private val validationsList: MutableLiveData<List<Validation>> = MutableLiveData()
-    val launchDummy: MutableLiveData<Event<Map<String, String>>> = MutableLiveData()
+    val launchMain: MutableLiveData<Event<Map<String, String>>> = MutableLiveData()
 
     val fullNameField: MutableLiveData<String> = MutableLiveData()
     val emailField: MutableLiveData<String> = MutableLiveData()
@@ -65,7 +65,7 @@ class SignupViewModel(
                             {
                                 userRepository.saveCurrentUser(it)
                                 registeringIn.postValue(false)
-                                launchDummy.postValue(Event(emptyMap()))
+                                launchMain.postValue(Event(emptyMap()))
                             },
                             {
                                 handleNetworkError(it)

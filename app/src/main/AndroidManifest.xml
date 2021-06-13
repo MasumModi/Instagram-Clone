@@ -29,6 +29,8 @@
 
         <activity android:name="com.example.instagram.ui.dummy.DummyActivity" />
 
+        <activity android:name="com.example.instagram.ui.main.MainActivity" />
+
     </application>
 
 </manifest>
