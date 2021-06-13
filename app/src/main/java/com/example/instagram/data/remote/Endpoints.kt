@@ -8,4 +8,10 @@ object Endpoints {
 
     const val SIGNUP = "signup/mindorks"
 
+    const val HOME_POSTS_LIST = "instagram/post/list"
+
+    const val POST_LIKE = "instagram/post/like"
+
+    const val POST_UNLIKE = "instagram/post/unlike"
+
 }

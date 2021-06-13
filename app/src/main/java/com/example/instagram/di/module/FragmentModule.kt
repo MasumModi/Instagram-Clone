@@ -3,10 +3,13 @@ package com.example.instagram.di.module
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.instagram.data.repository.DummyRepository
+import com.example.instagram.data.repository.PostRepository
+import com.example.instagram.data.repository.UserRepository
 import com.example.instagram.ui.base.BaseFragment
 import com.example.instagram.ui.dummies.DummiesAdapter
 import com.example.instagram.ui.dummies.DummiesViewModel
 import com.example.instagram.ui.home.HomeViewModel
+import com.example.instagram.ui.home.posts.PostsAdapter
 import com.example.instagram.ui.photo.PhotoViewModel
 import com.example.instagram.ui.profile.ProfileViewModel
 import com.example.instagram.utils.ViewModelProviderFactory
@@ -15,6 +18,7 @@ import com.example.instagram.utils.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.processors.PublishProcessor
 
 @Module
 class FragmentModule(private val fragment: BaseFragment<*>) {
@@ -39,11 +43,16 @@ class FragmentModule(private val fragment: BaseFragment<*>) {
     fun provideHomeViewModel(
         schedulerProvider: SchedulerProvider,
         compositeDisposable: CompositeDisposable,
-        networkHelper: NetworkHelper
+        networkHelper: NetworkHelper,
+        userRepository: UserRepository,
+        postRepository: PostRepository
     ): HomeViewModel =
         ViewModelProviders.of(fragment,
             ViewModelProviderFactory(HomeViewModel::class) {
-                HomeViewModel(schedulerProvider, compositeDisposable, networkHelper)
+                HomeViewModel(
+                    schedulerProvider, compositeDisposable, networkHelper, userRepository,
+                    postRepository, ArrayList(), PublishProcessor.create()
+                )
             }
         ).get(HomeViewModel::class.java)
 
@@ -73,4 +82,7 @@ class FragmentModule(private val fragment: BaseFragment<*>) {
 
     @Provides
     fun provideDummiesAdapter() = DummiesAdapter(fragment.lifecycle, ArrayList())
+
+    @Provides
+    fun providePostAdapter() = PostsAdapter(fragment.lifecycle, ArrayList())
 }
